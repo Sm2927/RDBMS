@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Prescription</title>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+  <!-- <link rel="stylesheet" type="text/css" href="Rdbms_app.css"> -->
+  <link rel="stylesheet"  href="{{url_for('static', filename='css/font-awesome.css')}}">
+  <script src="{{url_for('static', filename='js/jquery-3.2.1.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+	<style type="text/css">
+	body{
+		background-color: rgba(65, 160, 136, 0.3);
+	}
+	
+		hr.style-one {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+
+	}
+	</style>
+</head>
+<body>
+	<div class = "container">
+	<div>
+		<h3><Date:15-11-2018></Date:15-11-2018></h3>
+		<p>Patient's name:{{user.name}} 	&nbsp;	&nbsp;	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Doctor's name:{{user.doctor}}</p>
+		<p>Date Of Birth:{{user.dob}}</p>
+		<hr class="style-one">
+		
+		<p>Past Diseases:
+			{% for i in user.disease %}
+			{{i}}/
+			{% endfor %}
+			</p>
+		<p>Symptoms:</p>
+		<ul>
+			<li>{{user.S1}}</li>
+			<li>{{user.S2}}</li>
+			<li>{{user.S3}}</li>
+			<li>{{user.S4}}</li>
+			<li>{{user.S5}}</li>
+		</ul>
+		<h3>Suggested treatments:</h3>
+		<p>__________________________________________________________________________________________</p>
+		<p>__________________________________________________________________________________________</p>
+		<p>__________________________________________________________________________________________</p>
+		<p>__________________________________________________________________________________________</p>
+		<p>__________________________________________________________________________________________</p>
+	</div>
+	</div>
+</body>
+</html>

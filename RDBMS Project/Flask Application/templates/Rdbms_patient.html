@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>PATIENTS_PAGE</title>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='Rdbms_patient.css')}}">
+	<link rel="stylesheet"  href="{{url_for('static', filename='css/font-awesome.css')}}">
+  <script src="{{url_for('static', filename='js/jquery-3.2.1.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+	
+</head>
+<body>
+	<nav class ="navbar navbar-inverse">
+		 <div class="container-fluid">
+              	<div class="navbar-header">
+              		<a class="navbar-brand" href="#">Brand logo</a>
+              		<!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+              			<span class="icon-bar"></span>
+              			<span class="icon-bar"></span>
+              			<span class="icon-bar"></span>
+              			
+              		</button> -->
+              		
+              	</div>
+              	<div>
+              		
+              		<ul class="nav navbar-nav navbar-right">
+              			<li><a href="/home">Sign out</a></li>
+              			<!-- <li><a href="#cnt">Contact</a></li>
+              			<li><a href="#"  data-toggle="modal" data-target="#mm1">Register</a></li>
+        				<li><a href="#" data-toggle="modal" data-target="#mm">Login</a></li> -->
+
+
+              		</ul>
+              	</div>
+              </div>
+	</nav>
+	<div class="container sym">
+		<div class="row hi">
+			<h3>Hi {{user}}</h3>
+			<hr>
+		</div>
+		<div class="row">
+			<h4>Enter your symptoms</h4>
+			<hr>
+			<br>
+			<form autocomplete="off" action="/disease" method="POST">
+  <div class="autocomplete" style="width:300px;">
+
+    <input id="symptom1" type="text" name="Symptom1" placeholder="Enter your symptom">
+  </div>
+<br>
+
+  <div class="autocomplete" style="width:300px;">
+
+    <input id="symptom2" type="text" name="Symptom2" placeholder="Enter your symptom">
+  </div>
+<br>
+
+  <div class="autocomplete" style="width:300px;">
+
+    <input id="symptom3" type="text" name="Symptom3" placeholder="Enter your symptom">
+  </div>
+<br>
+  <div class="autocomplete" style="width:300px;">
+
+    <input id="symptom4" type="text" name="Symptom4" placeholder="Enter your symptom">
+  </div>
+<br>
+  <div class="autocomplete" style="width:300px;">
+
+    <input id="symptom5" type="text" name="Symptom5" placeholder="Enter your symptom">
+  </div>
+<input type="submit" class="sub btn-lg" value="Submit"> </form>
+<br>
+<hr>
+	<div class="review">
+	<button type="submit" class="btn btn-primary btn-lg sub">Give us a review</button>
+	<div>
+<hr>
+
+
+		</div>
+	</div>
+	 <script type="text/javascript" src="{{url_for('static', filename='Rdbms_patient.js')}}"></script>
+</body>
+</html>
